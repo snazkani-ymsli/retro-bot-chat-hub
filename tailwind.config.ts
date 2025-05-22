@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				retro: {
+					background: '#151515',
+					terminal: '#1a1a1a',
+					accent: '#9b87f5',
+					accent2: '#33C3F0',
+					text: '#33FF33',
+					muted: '#666666',
+					border: '#333333',
 				}
+			},
+			fontFamily: {
+				mono: ['"VT323"', 'monospace', 'ui-monospace', 'SFMono-Regular'],
+				pixel: ['"Press Start 2P"', 'cursive'],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +98,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'blink': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
+				},
+				'scanlines': {
+					'0%': { backgroundPosition: '0 0' },
+					'100%': { backgroundPosition: '0 100%' }
+				},
+				'pulse-glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 5px rgba(155, 135, 245, 0.4), 0 0 20px rgba(155, 135, 245, 0.2)'
+					},
+					'50%': { 
+						boxShadow: '0 0 15px rgba(155, 135, 245, 0.6), 0 0 30px rgba(155, 135, 245, 0.3)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'blink': 'blink 1s infinite',
+				'scanlines': 'scanlines 8s linear infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
 			}
 		}
 	},
